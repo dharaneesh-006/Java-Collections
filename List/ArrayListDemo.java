@@ -2,11 +2,15 @@ package List;
 
 import java.util.ArrayList;
 
-
 public class ArrayListDemo {
 
     static void printer(ArrayList<Integer> arr)
     {   
+        if(arr.size() == 0 ){
+            System.out.println("Array is empty...");
+            return;
+        }
+        
         System.out.println("Array Start....");
         for(int i : arr)
         {
@@ -37,8 +41,20 @@ public class ArrayListDemo {
         printer(arrlist);
 
         System.out.println(arrlist.contains(10)); //Check whether the element present in array
+        printer(arrlist);
+        arrlist.add(10);
+        arrlist.add(10);
+        printer(arrlist);
+        System.out.println(arrlist.indexOf(10));
+        System.out.println(arrlist.lastIndexOf(10)); // Returns the index Positions
 
-        
+
+        //Arraylist Functions
+        System.out.println(arrlist.size());
+        System.err.println(arrlist.isEmpty());
+        arrlist.clear(); // clears the array.
+        printer(arrlist);
+
 
     }
 }
